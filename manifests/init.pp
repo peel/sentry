@@ -1,7 +1,7 @@
 class base {
-	include sudo, ssh, puppet	
+	include sudo, ssh, puppet, db, proxy
 }
 
-node sentry.nordea.com{
-	include base, db, proxy 
-}
+# node sentry {
+# 	include base, db, proxy 
+# }
