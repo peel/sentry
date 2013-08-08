@@ -1,0 +1,9 @@
+[submodule "modules/postgres"]
+	path = modules/postgres
+	url = git@github.com:puppetlabs/puppetlabs-postgresql.git
+[submodule "modules/sentry"]
+	path = modules/sentry
+	url = git@github.com:kecebongsoft/puppet-sentry.git
+[submodule "modules/nginx"]
+	path = modules/nginx
+	url = git@github.com:puppetlabs/puppetlabs-nginx.git
