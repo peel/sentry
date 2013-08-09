@@ -1,7 +1,7 @@
 class base {
+	import 'db.pp'
+	import 'proxy.pp'
 	include sudo, ssh, puppet, db, proxy
 }
 
-# node sentry {
-# 	include base, db, proxy 
-# }
+include base

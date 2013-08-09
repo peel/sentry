@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
+  config.vm.hostname = "x.nordea.com"
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
@@ -12,6 +13,6 @@ Vagrant.configure("2") do |config|
     puppet.module_path="modules"
   end
 
-  config.vm.network :forwarded_port, guest: 80, host: 4567 
+  config.vm.network :forwarded_port, guest: 80, host: 45678
 
 end

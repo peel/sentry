@@ -1,5 +1,6 @@
 class puppet::config{
 	include puppet::params
+	$puppetserver = "puppet.nordea.com"
 
 	file{"/etc/puppet/puppet.conf":
 		ensure => present,
