@@ -1,3 +1,0 @@
-class { 'sentry':
-  password       => 'sentry',
-}

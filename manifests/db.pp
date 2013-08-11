@@ -1,5 +1,5 @@
 class db{
-
+	
 	class { 'postgresql': }
 
 	class { 'postgresql::server':
@@ -12,7 +12,6 @@ class db{
 	    'manage_pg_hba_conf'         => false,
 	    # 'postgres_password'          => 'postgres',
 	  },
-	  require => [Class['postgresql']],
 	} 
 
 	postgresql::db {'sentry':

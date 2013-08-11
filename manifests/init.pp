@@ -1,15 +1,20 @@
-Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
+Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin/", "/usr/local/sbin/" ] }
 
-import 'db.pp'
-import 'proxy.pp'
-import 'sentry.pp'
+# import 'sentry.pp'
 
 class base {
 	exec{'apt-get update --fix-missing': }
 	package{'postgresql':
 		ensure => 'present',
 	}
-	include apt, puppet, db, proxy, sentry
+	include apt, supervisor, puppet, db, proxy, sentry
+}
+
+class { 'sentry':
+  password       => 'sentry',
+  path           => '/var/sentry',
+  install_method => 'default',
+  require        => [Class['supervisor'], Class['db'],],
 }
 
 class { 'apt':
