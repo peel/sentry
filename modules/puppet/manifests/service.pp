@@ -4,6 +4,6 @@ class puppet::service{
 		hasstatus => true,
 		hasrestart => true,
 		enable => true,
-		require => Class["puppet:install"],
+		# require => Class["puppet:install"],
 	}
 }
