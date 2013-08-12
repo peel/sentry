@@ -18,7 +18,7 @@
 	url = http://github.com/puppetlabs/puppetlabs-postgresql.git
 [submodule "modules/sentry"]
 	path = modules/sentry
-	url = http://github.com/thomasvs/puppet-sentry.git
+	url = http://github.com/peel/puppet-sentry.git
 [submodule "modules/supervisor"]
 	path = modules/supervisor
 	url = http://github.com/plathrop/puppet-module-supervisor.git
